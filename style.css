@@ -1,0 +1,261 @@
+:root {
+	/* COLORS */
+
+	/* Primary */
+	--gradient-light:  hsl(6, 100%, 80%);
+	--gradient-dark: hsl(335, 100%, 65%);
+
+	/* Neutral */
+	--pale-blue: hsl(243, 100%, 93%);
+	--grayish-blue: hsl(229, 7%, 55%);
+	--dark-blue: hsl(228, 56%, 26%);
+	--very-dark-blue: hsl(229, 57%, 11%);
+
+	/* TYPOGRAPHY */
+
+	/* Font Size */
+	
+	/* Body Copy */
+	--fs: 14px;
+
+	/* Font Family */
+	--ff: 'Raleway', sans-serif;
+}
+
+
+html, body {
+	margin: 0;
+	font-family: var(--ff);
+	font-size: var(--fs);
+	background: url('images/bg-mobile.png') no-repeat;
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+}
+
+
+.card__one {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: 14em;
+	width: 85vw;
+	background-color: var(--dark-blue);
+	border-radius: 1em 6em 1em 1em;
+	margin-bottom: 1.2em;
+}
+
+.logo {
+	margin-bottom: 2em;
+	margin-left: 3em;
+}
+
+.icons {
+	display: flex;
+	margin-left: 3em;
+}
+
+.icon__one, .icon__two, .icon__three {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 3.5em;
+	height: 3.5em;
+	border-radius: .5em;
+	background-color: var(--very-dark-blue);
+}
+
+.icon__two, .icon__three {
+	margin-left: 1em;
+}
+
+p {
+	color: hsl(250, 100%, 100%);
+}
+
+.card__two {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	height: 11em;
+	width: 85vw;
+	border-radius: 1em;
+	background-color: var(--dark-blue);
+}
+
+.card__info {
+	margin-top: 2em;
+}
+
+.gb__used {
+	font-weight: 700;
+}
+
+.line__outer {
+	display:  flex;
+	justify-content: flex-start;
+	align-items: center;
+	width: 18em;
+	height: 1.4em;
+	border-radius: 2em;
+	background-color: var(--very-dark-blue);
+}
+
+.line__inner {
+	width: 13.5em;
+	height: 1em;
+	border-radius: 2em;
+	background: linear-gradient(to right, var(--gradient-light), var(--gradient-dark));
+	margin-left: .1em;
+	animation: grow 3s cubic-bezier(0, 0, 0.2, 1);
+}
+
+@keyframes grow {
+	0% {
+		width: 0em;
+	}
+
+	100% {
+		width: 13.5em;
+	}
+}
+
+.line__circle {
+	width: .75em;
+	height: .75em;
+	background-color: hsl(250, 100%, 100%);
+	float: right;
+	margin: .15em .12em;
+	border-radius: 5em;
+}
+
+.storage__capacity {
+	display: flex;
+	width: 20em;
+	justify-content: space-between;
+}
+
+.storage__left {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 1;
+	margin-top: -2.5em;
+	width: 13em;
+	height: 5em;
+	border-radius: 1em;
+	background-color: hsl(250, 100%, 100%);
+}
+
+.gb__start {
+	margin-left: 1em;
+	font-size: .8rem;
+}
+
+.gb__end {
+	margin-right: 1em;
+	font-size: .8em;
+}
+
+.gb__start, .gb__end {
+	font-weight: 700;
+}
+
+.gb__current {
+	color: var(--very-dark-blue);
+	font-weight: 700;
+	font-size: 2.5rem;
+	margin-right: .3em;
+}
+
+.gb__left {
+	color: var(--grayish-blue);
+	font-weight: 700;
+	font-size: .9em;
+	margin-top: 1.3em;
+}
+
+@media (min-width: 1000px) {
+	html, body {
+		background: url('images/bg-desktop.png') no-repeat bottom var(--very-dark-blue);
+	}
+
+	.wrapper {
+		flex-direction: row;
+	}
+
+	.card__one {
+		width: 25em;
+		margin-right: 4em;
+		margin-left: -4em;
+		margin-bottom: 0;
+		margin-top: -2.2em;
+	}
+
+	.card__two {
+		align-items: flex-start;
+		width: 40em;
+		margin-left: -2em;
+		height: 11em;
+		margin-top: 1em;
+	}
+
+	.card__info {
+		margin-top: 2.5em;
+		font-size: 1.1rem;
+	}
+
+	.card__info, 
+	.line__outer {
+		margin-left: 3em;
+	}
+	
+	.line__outer {
+		width: 34em;
+	}
+
+	.line__inner {
+		width: 25em;
+	}
+
+	@keyframes grow {
+	0% {
+		width: 0em;
+	}
+
+	100% {
+		width: 25em;
+	}
+}
+	
+	.storage__capacity {
+		width: 31em;
+		margin-left: 2em;
+	}
+
+	.gb__end {
+		margin-right: -5em;
+	}
+
+	.storage__left {
+		margin-left: -16em;
+		margin-top: -10.5em;
+		border-radius: .5em .5em 0 .5em;
+		bottom: 0;
+	}
+
+	.arrow {
+		width: 1.5em;
+		height: 1.5em;
+		background-color: hsl(250, 100%, 100%);
+		margin-top: -4.2em;
+		margin-left: -1.5em;
+		clip-path: polygon(0% 0%, 100% 0, 100% 100%);	
+	}
+}

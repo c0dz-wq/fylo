@@ -28,6 +28,7 @@ html, body {
 	font-family: var(--ff);
 	font-size: var(--fs);
 	background: url('images/bg-mobile.png') no-repeat;
+	background-size: cover;
 }
 
 .wrapper {
@@ -44,7 +45,7 @@ html, body {
 	flex-direction: column;
 	justify-content: center;
 	height: 14em;
-	width: 85vw;
+	width: 23em;
 	background-color: var(--dark-blue);
 	border-radius: 1em 6em 1em 1em;
 	margin-bottom: 1.2em;
@@ -84,7 +85,7 @@ p {
 	justify-content: flex-start;
 	align-items: center;
 	height: 11em;
-	width: 85vw;
+	width: 23em;
 	border-radius: 1em;
 	background-color: var(--dark-blue);
 }
@@ -184,6 +185,7 @@ p {
 @media (min-width: 1000px) {
 	html, body {
 		background: url('images/bg-desktop.png') no-repeat bottom var(--very-dark-blue);
+		background-size: 100% 50%;
 	}
 
 	.wrapper {
